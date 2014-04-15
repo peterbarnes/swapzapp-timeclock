@@ -9,7 +9,7 @@ class Timecard
     @timecards = []
     @data = JSON.parse(RestClient.get(self._base_url))
     @data.each do |_timecard|
-      @timecards << Timecard.new(id: _timecard[0], first_name: _timecard[4], last_name: _timecard[6])
+      @timecards << Timecard.new(first_name: _timecard[1])
     end
     @timecards
   end
