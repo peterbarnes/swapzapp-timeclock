@@ -11,3 +11,28 @@
  *= require_self
  *= require_tree .
  */
+@import "bootstrap";
+
+.fa {
+  font-family: FontAwesome !important;
+}
+
+.inside {
+  width: 65%;
+  .data {
+    padding-top: 10px;
+    p {
+      width: 98%;
+      background-color: #428bca;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}

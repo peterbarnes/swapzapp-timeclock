@@ -16,6 +16,6 @@ class Timecard
   private
 
     def self._base_url
-      Rails.env.production? ? 'http://gameroom.swapzapp.com/api/users/' : 'http://x:8e3949f0a49e013164600c2937e6c8c6@example.swapzapp.dev/api/users?clocked_in=true'
+      Rails.env.production? ? 'http://x:ea3d2470e65b0130f5493e1edbff447e@gameroom.swapzapp.com/api/users?clocked_in=true' : 'http://x:8e3949f0a49e013164600c2937e6c8c6@example.swapzapp.dev/api/users?clocked_in=true'
     end
 end
