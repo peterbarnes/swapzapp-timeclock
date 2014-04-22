@@ -1,0 +1,10 @@
+<div class="link">
+  <%= link_to "Clocked out", out_path, class: "btn btn-default center-block" %>
+</div>
+<div class="data">
+    <% @users.each do |user| %>
+    <p class="center-block">
+      <%= user.first_name %> <%= user.last_name %> 
+    </p>
+    <% end %>
+</div>

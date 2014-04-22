@@ -1,6 +1,7 @@
 UserTimeclock::Application.routes.draw do
-  resources :timecards, :except => [:show]
-  root 'timecards#index'
+  resources :users, :except => [:show]
+  root 'users#index'
+  match '/out', to: 'users#out', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
