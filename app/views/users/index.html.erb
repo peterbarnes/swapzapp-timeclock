@@ -4,11 +4,14 @@
       <i class="fa fa-clock-o"></i>
     <% end %>
     <% if params[:filter] == 'clocked_in' %>
-    Clocked in
+      <% provide(:title, "| Clocked in") %>
+      Clocked in
     <% elsif params[:filter] == 'clocked_out' %>
-    Clocked out
+      <% provide(:title, "| Clocked out") %>
+      Clocked out
     <% else %>
-    Clocked in
+      <% provide(:title, "| Clocked in") %>
+      Clocked in
     <% end %>
   </p>
   <% @users.each do |user| %>
