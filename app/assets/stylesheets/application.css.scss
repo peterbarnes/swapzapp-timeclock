@@ -17,11 +17,16 @@
   font-family: FontAwesome !important;
 }
 
+.navbar-brand i {
+  color: #428bca;
+}
+
 .inside {
   width: 65%;
   .data {
     padding-top: 10px;
-    p {
+    margin-top: 20px;
+    p.user {
       width: 98%;
       background-color: #428bca;
       color: #ffffff;
@@ -29,6 +34,13 @@
       padding: 10px;
       font-size: 20px;
       border-radius: 5px;
+    }
+    .head {
+      color: #000000;
+      width: 40%;
+      margin-left: 10px;
+      text-align: left;
+      font-size: 20px;
     }
   }
 }
@@ -41,4 +53,8 @@
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 10px;
+}
+
+.clocklink {
+  font-size: 20px;
 }

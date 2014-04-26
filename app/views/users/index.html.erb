@@ -1,10 +1,19 @@
-<div class="link">
-  <%= link_to "Clocked in", out_path, class: "btn btn-default center-block" %>
-</div>
-<div class="data">
-    <% @users.each do |user| %>
-    <p class="center-block">
-      <%= user.first_name %> <%= user.last_name %> 
-    </p>
+<div class="data well">
+  <p class="head">
+    <%= link_to root_path(:filter => params[:filter]), class: "clocklink" do %>
+      <i class="fa fa-clock-o"></i>
     <% end %>
+    <% if params[:filter] == 'clocked_in' %>
+    Clocked in
+    <% elsif params[:filter] == 'clocked_out' %>
+    Clocked out
+    <% else %>
+    Clocked in
+    <% end %>
+  </p>
+  <% @users.each do |user| %>
+  <p class="center-block user">
+    <%= user.first_name %> <%= user.last_name %> 
+  </p>
+  <% end %>
 </div>

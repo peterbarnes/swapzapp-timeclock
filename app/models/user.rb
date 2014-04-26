@@ -5,6 +5,16 @@ class User
 
   validates_presence_of "first_name", "last_name"
 
+  def self.all(params)
+    if params[:filter] == "clocked_out"
+      User.all_out
+    elsif params[:filter] == "clocked_in"
+      User.all_in
+    else
+      User.all_in
+    end
+  end
+
   def self.all_in
     @users = []
     @data = JSON.parse(RestClient.get(self._base_url_in))
